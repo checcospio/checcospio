@@ -1,0 +1,9 @@
+node_modules/
+.env
+storage/*.sqlite
+storage/*.sqlite-shm
+storage/*.sqlite-wal
+storage/uploads/*
+storage/private-downloads/*
+!storage/uploads/.gitkeep
+!storage/private-downloads/.gitkeep
