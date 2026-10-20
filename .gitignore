@@ -1,9 +1,8 @@
 node_modules/
 .env
+.env.*
+!.env.example
+storage/
 storage/*.sqlite
 storage/*.sqlite-shm
 storage/*.sqlite-wal
-storage/uploads/*
-storage/private-downloads/*
-!storage/uploads/.gitkeep
-!storage/private-downloads/.gitkeep

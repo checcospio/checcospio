@@ -1,53 +1,546 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07111f"><meta name="description" content="Sito ufficiale di CheccosPio: musica, nuove uscite e store.">
-<title>CheccosPio — Musica, visione, indipendenza</title>
-<style>
-:root{--bg:#07111f;--panel:#0c1b2e;--line:#203a59;--text:#f4f5fb;--muted:#a9aec2;--lime:#4da3ff;--purple:#77c8ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Inter,system-ui,Segoe UI,sans-serif}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:100%;max-width:1180px;margin-inline:auto;padding:0 24px;min-width:0}.nav{position:sticky;top:0;z-index:5;background:#07111ff2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.navin{min-height:70px;display:flex;align-items:center;gap:clamp(10px,2vw,24px);flex-wrap:wrap;padding-block:10px}.logo{font-weight:950;font-style:italic;letter-spacing:-2px;font-size:25px;transform:skew(-8deg)}.navlinks{display:flex;gap:clamp(10px,2vw,24px);margin-left:auto;color:#c9cce0;text-transform:uppercase;font-size:12px;letter-spacing:1.5px}.navlinks a:hover{color:var(--lime)}.outline,.lime,.ghost{border:1px solid var(--lime);padding:11px 18px;border-radius:24px;background:transparent;color:var(--text);font-size:12px;font-weight:800;letter-spacing:.7px}.lime{background:linear-gradient(135deg,#7bc5ff,#398cff);color:#06101d;box-shadow:0 8px 24px #398cff30}.hero{min-height:520px;display:flex;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 77% 40%,#6e2cb9 0,transparent 32%),radial-gradient(ellipse at 65% 90%,#20104d 0,transparent 45%),linear-gradient(110deg,#07111f 10%,#11101c 65%,#100b1b)}.hero:after{content:'CP';position:absolute;right:8%;bottom:-95px;font-size:360px;font-weight:1000;letter-spacing:-40px;color:#ffffff07;pointer-events:none}.hero .wrap{width:100%;position:relative;z-index:1}.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--lime)}h1{font-size:clamp(42px,8vw,88px);line-height:1.02;letter-spacing:clamp(-4px,-.4vw,-1px);overflow-wrap:anywhere;margin:18px 0 22px;font-weight:950;font-style:italic}h2{font-size:30px;line-height:1.1;margin:5px 0 20px;letter-spacing:-1px}.sub{letter-spacing:4px;color:#d1d3e0;font-size:12px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.section{padding:clamp(42px,6vw,76px) 0;min-width:0;overflow-wrap:anywhere}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:18px}.sectionhead .eyebrow{margin-bottom:8px}.smalllink{color:var(--lime);font-size:11px;text-transform:uppercase;letter-spacing:1px}.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px;min-width:0}.product,.tile,.adminpanel{border:1px solid #263e5d;background:linear-gradient(145deg,#101d30,#080d17);border-radius:16px;overflow:hidden;box-shadow:0 16px 40px #0002}.cover{height:240px;display:grid;place-items:center;font-size:64px;background:radial-gradient(circle at 50% 40%,#7b3db8,#1d1540 35%,#07111f 75%);position:relative}.cover:before{content:'';position:absolute;inset:12px;border:1px solid #ffffff20}.cover span{filter:drop-shadow(0 0 18px #bb5cff);z-index:1}.prodinfo{padding:16px}.tag{display:inline-block;color:var(--purple);border:1px solid var(--purple);border-radius:20px;padding:3px 10px;font-size:10px;text-transform:uppercase;letter-spacing:1px}.prodinfo h3{font-size:16px;margin:10px 0 5px}.muted{color:var(--muted);font-size:13px}.price{color:var(--lime);font-size:21px;font-weight:900;margin:8px 0 12px}.wide{width:100%}.socialgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,175px),1fr));gap:14px;min-width:0}.tile{padding:8px}.tileart{height:145px;display:grid;place-items:center;font-size:38px;background:linear-gradient(145deg,#5727a0,#15172b 50%,#050607)}.tile:nth-child(2n) .tileart{background:linear-gradient(145deg,#222632,#09090c 70%)}.tile p{font-size:12px;margin:9px 0 0}.tile small{color:var(--muted);font-size:10px}.footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:12px}.footerin{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.hidden{display:none!important}.adminpanel{padding:22px;margin:25px auto;max-width:900px}.adminpanel h2{margin-top:0}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.formgrid>*{min-width:0}.field{display:flex;flex-direction:column;gap:6px;margin:8px 0}.field label{font-size:12px;color:#c7cbe0}.field input,.field textarea,.field select{width:100%;min-width:0;background:#090a10;border:1px solid var(--line);border-radius:6px;padding:11px;color:var(--text)}.field textarea{min-height:85px;resize:vertical}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.tab{padding:8px 13px;border:1px solid var(--line);background:#0b0c12;color:var(--muted);border-radius:20px}.tab.active{border-color:var(--lime);color:var(--lime)}.notice{border-left:3px solid var(--purple);padding:10px 13px;background:#171020;color:#d8c6ef;font-size:12px;margin:14px 0}.items{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.item{padding:12px;border:1px solid var(--line);border-radius:6px;font-size:13px}.cartbar{position:fixed;right:16px;bottom:16px;background:var(--lime);color:#111;padding:12px 16px;border-radius:30px;font-weight:900;box-shadow:0 5px 30px #0008;z-index:8}.modal{position:fixed;inset:0;background:#000b;z-index:10;display:grid;place-items:center;padding:20px}.modalbox{width:min(440px,100%);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}.modalbox h2{font-size:24px}.preview{max-width:100%;max-height:200px;margin-top:8px;border-radius:6px}.platforms{display:flex;gap:12px;flex-wrap:wrap}.platforms label{font-size:12px;color:#d4d7e7}.language{background:#0b0c12;color:var(--text);border:1px solid var(--line);padding:8px;border-radius:20px;font-size:12px}.hero{background-size:cover;background-position:center}.hero.has-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#07111ff2 0%,#07111fa8 55%,#07111f40 100%);z-index:0}.hero .wrap{z-index:1}.release-box{min-height:260px;border:1px solid var(--line);border-radius:10px;background:radial-gradient(ellipse at 50% 100%,#21134a,#090a0f 65%);position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;padding:30px}.release-message{position:relative;z-index:2;font-weight:900;font-size:clamp(18px,3vw,28px);letter-spacing:.4px;max-width:650px}.release-box .cloud{position:absolute;top:40px;left:calc(50% - 55px);width:110px;height:38px;background:#c9d1e5;border-radius:35px;filter:drop-shadow(0 0 18px #aab7ff88);animation:cloudDrift 3s ease-in-out infinite alternate}.cloud:before,.cloud:after{content:"";position:absolute;background:inherit;border-radius:50%}.cloud:before{width:48px;height:48px;left:17px;top:-20px}.cloud:after{width:38px;height:38px;right:15px;top:-12px}.rain{position:absolute;top:88px;left:0;right:0;display:flex;justify-content:center;gap:16px}.rain i{height:22px;width:2px;background:#9fc8ff;display:block;animation:rainFall .8s linear infinite;opacity:.8}.rain i:nth-child(2n){animation-delay:.25s}.rain i:nth-child(3n){animation-delay:.45s}.lightning{position:absolute;top:105px;left:calc(50% + 52px);color:#e9eeff;font-size:45px;filter:drop-shadow(0 0 10px #9e9dff);animation:flash 2.2s infinite}.moon{font-size:68px;position:absolute;top:22px;left:calc(50% - 34px);filter:drop-shadow(0 0 20px #b9baff);animation:moonIn 1.2s ease both}.fireworks{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 25%,#c5ff3d 0 2px,transparent 3px),radial-gradient(circle at 80% 20%,#b05cff 0 2px,transparent 3px),radial-gradient(circle at 75% 65%,#fff 0 2px,transparent 3px),radial-gradient(circle at 30% 70%,#b05cff 0 2px,transparent 3px);animation:sparkle 1.5s infinite alternate}.release-box.available .cloud,.release-box.available .rain,.release-box.available .lightning{display:none}.release-box.available{background:radial-gradient(ellipse at 50% 0%,#30205c,#090a0f 70%)}@keyframes cloudDrift{to{transform:translateX(28px)}}@keyframes rainFall{0%{transform:translateY(0);opacity:.1}40%{opacity:1}100%{transform:translateY(36px);opacity:0}}@keyframes flash{0%,90%,100%{opacity:.15}92%,96%{opacity:1}}@keyframes moonIn{from{opacity:0;transform:translateY(35px) scale(.5)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes sparkle{from{opacity:.25;transform:scale(.98)}to{opacity:1;transform:scale(1.02)}}.empty-state{padding:22px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);text-align:center}.empty-state:empty{display:none}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#1c2230;border:1px solid var(--line);padding:10px 15px;border-radius:8px;z-index:20;font-size:13px}
-@media(max-width:760px){.navin{height:auto;gap:10px;justify-content:space-between}.navlinks{order:3;width:100%;justify-content:center;margin:0;padding:6px 0}.language{max-width:130px}.navlinks{gap:12px;font-size:10px}.navlinks a:nth-child(3){display:none}.logo{font-size:20px}.outline{padding:8px 10px}.hero{min-height:390px}.hero:after{font-size:220px;right:0}.products{grid-template-columns:1fr}.cover{height:230px}.socialgrid{grid-template-columns:repeat(2,1fr)}.formgrid{grid-template-columns:1fr}.items{grid-template-columns:1fr 1fr}.sectionhead{align-items:start;flex-direction:column}.wrap{padding:0 16px}h1{letter-spacing:-3px}}
-.music-feature{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(280px,1.2fr);gap:24px;align-items:center;border:1px solid var(--line);border-radius:18px;padding:clamp(18px,4vw,34px);background:radial-gradient(ellipse at 0% 0%,#16365b,#0a1220 65%)}.music-feature h3{font-size:clamp(28px,4vw,44px);margin:16px 0 8px}.spotify-frame{min-width:0;overflow:hidden;border-radius:12px}.spotify-frame iframe{display:block;border-radius:12px}.release-details{position:relative;z-index:2;margin-top:125px;color:#fff;font-size:14px}.release-box .release-message{margin-top:125px}.release-box.available .release-message{margin-top:125px}.release-box.available .release-details{margin-top:8px}.release-box{min-height:310px}.adminpanel{padding:clamp(18px,4vw,32px)}@media(max-width:760px){.music-feature{grid-template-columns:1fr}.spotify-frame iframe{height:352px}.release-box{min-height:330px}}
-</style></head><body>
-<header class="nav"><div class="wrap navin"><a class="logo" href="#home">CHECCOSPIO</a><nav class="navlinks"><a href="#musica" data-i18n="music">Musica</a><a href="#store" data-i18n="store">Store</a><a href="#social" data-i18n="community">Community</a></nav><select class="language" id="languageSelect" aria-label="Lingua del sito"><option value="it">🇮🇹 Italiano</option><option value="en">🇬🇧 English</option><option value="es">🇪🇸 Español</option><option value="fr">🇫🇷 Français</option></select><button class="outline" id="adminOpen" data-i18n="admin">⚙ Admin</button></div></header>
-<main id="home"><section class="hero" id="heroBanner"><div class="wrap"><div class="eyebrow" id="heroEyebrow">Benvenuto nel mondo di</div><h1 id="heroArtist">CHECCOSPIO</h1><div class="sub" id="heroTagline">MUSICA. VISIONE. INDIPENDENZA.</div><div class="actions"><a class="lime" target="_blank" rel="noreferrer" href="https://open.spotify.com/artist/4MeVJ2uTbH7aM9SRHUhIzl" data-i18n="spotify">▶ &nbsp; ASCOLTA SU SPOTIFY</a><a class="outline" href="#store" data-i18n="exploreStore">♧ &nbsp; ESPLORA LA STORE</a></div></div></section>
-<section class="section wrap" id="musica"><div class="sectionhead"><div><div class="eyebrow">— Catalogo ufficiale</div><h2>MUSICA</h2><p class="muted">Album, singoli e classifiche dal profilo Spotify ufficiale.</p></div><a class="smalllink" target="_blank" rel="noreferrer" href="https://open.spotify.com/artist/4MeVJ2uTbH7aM9SRHUhIzl">Apri Spotify ↗</a></div><div class="music-feature"><div><span class="tag">IN EVIDENZA</span><h3>Acid Bugs</h3><p class="muted">Ascolta l'uscita sul profilo ufficiale CheccosPio.</p><a class="lime" target="_blank" rel="noreferrer" href="https://open.spotify.com/artist/4MeVJ2uTbH7aM9SRHUhIzl">Ascolta su Spotify</a></div><div class="spotify-frame"><iframe title="Profilo Spotify CheccosPio" src="https://open.spotify.com/embed/artist/4MeVJ2uTbH7aM9SRHUhIzl?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div></div><div class="sectionhead" style="margin-top:36px"><div><div class="eyebrow">— Prossima release</div><h2>MUSICA IN ARRIVO</h2></div></div><div class="release-box" id="releaseBox"><div class="cloud"></div><div class="rain"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="lightning">ϟ</div><div class="release-message" id="releaseMessage">Oh No! Al momento non sono previste nuove uscite!</div><div id="releaseDetails" class="release-details"></div></div></section>
-<section class="section wrap" id="store"><div class="sectionhead"><div><div class="eyebrow">— Shop ufficiale</div><h2>STORE</h2><p class="muted">Prodotti digitali e merchandising, separati dal catalogo musicale.</p></div></div><div class="products" id="productGrid"></div><p id="productsEmpty" class="empty-state" data-i18n="emptyProducts">Nessun prodotto disponibile al momento.</p></section>
-<section class="section wrap" id="social"><div class="sectionhead"><div><div class="eyebrow" data-i18n="socialEyebrow">— I miei canali</div><h2 data-i18n="social">SOCIAL</h2></div><span class="smalllink" data-i18n="follow">Seguimi sui miei canali →</span></div><div class="socialgrid" id="postGrid"></div><p id="postsEmpty" class="empty-state" data-i18n="emptyPosts">Nessun contenuto pubblicato. I tuoi post appariranno qui quando li aggiungerai dal pannello.</p></section></main>
-<section class="section wrap hidden" id="adminArea"><div class="adminpanel"><div class="eyebrow">Area riservata</div><h2>PANNELLO AMMINISTRATORE</h2><p class="muted">Gestisci contenuti, catalogo e impostazioni della pagina artista.</p><div class="tabs"><button class="tab active" data-tab="posts">Post e storie</button><button class="tab" data-tab="products">Prodotti</button><button class="tab" data-tab="release">Nuova uscita</button><button class="tab" data-tab="settings">Sito e credenziali</button></div>
-<div id="tab-posts"><h3>Nuovo contenuto social</h3><div class="formgrid"><div class="field"><label>Tipo contenuto</label><select id="postType"><option>Post</option><option>Storia</option><option>Reel / Short</option></select></div><div class="field"><label>Testo / didascalia</label><input id="postCaption" placeholder="Scrivi una didascalia…"></div></div><div class="field"><label>File immagine o video MP4</label><input id="postFile" type="file" accept="image/*,video/mp4"><img id="postPreview" class="preview hidden"><video id="videoPreview" class="preview hidden" controls></video></div><div class="field"><label>Pubblica su (demo: selezione piattaforme)</label><div class="platforms"><label><input type="checkbox" value="Instagram" checked> Instagram</label><label><input type="checkbox" value="TikTok" checked> TikTok</label><label><input type="checkbox" value="Facebook"> Facebook</label><label><input type="checkbox" value="YouTube"> YouTube</label><label><input type="checkbox" value="X"> X</label></div></div><button class="lime" id="addPost">Salva contenuto nella demo</button><div class="notice">Questa anteprima non pubblica davvero sui social. La pubblicazione simultanea richiede collegare gli account e integrare le API ufficiali di ogni piattaforma.</div></div>
-<div id="tab-release" class="hidden"><h3>Crea una nuova uscita</h3><p class="muted">La release crea una bozza di prodotto digitale. Attivala per inserirla nello Store; data e ora determinano quando compare in “Musica in arrivo”. Dopo la data di uscita la sezione torna automaticamente vuota.</p><div class="formgrid"><div class="field"><label>Titolo uscita</label><input id="relName" placeholder="Titolo del singolo / album"></div><div class="field"><label>Tipo</label><select id="relType"><option>Singolo</option><option>EP</option><option>Album</option><option>Film musicale</option></select></div><div class="field"><label>Data e ora di uscita</label><input id="relDate" type="datetime-local"></div><div class="field"><label>Prezzo prodotto digitale (€)</label><input id="relPrice" type="number" min="0" step="0.01" placeholder="1.99"></div></div><div class="field"><label>Descrizione</label><textarea id="relDesc" placeholder="Descrizione della release"></textarea></div><div class="field"><label>Copertina</label><input id="relImage" type="file" accept="image/*"></div><div class="field"><label>File digitale per il prodotto</label><input id="relDigitalFile" type="file" accept="audio/*,video/mp4,.zip,.pdf"></div><label><input id="relActivate" type="checkbox"> Attiva il prodotto digitale nello Store</label><div class="field"><label>Link Spotify / pre-save (facoltativo)</label><input id="relLink" type="url" placeholder="https://open.spotify.com/..."></div><button class="lime" id="saveRelease">Crea uscita</button><div id="releaseAdminList" class="items"></div><div class="notice">Questa versione è una demo locale: checkout, consegna sicura dei file e sincronizzazione con Spotify non sono attivi fino al collegamento di servizi server reali.</div></div>
-<div id="tab-products" class="hidden"><h3>Aggiungi un prodotto</h3><div class="formgrid"><div class="field"><label>Nome prodotto</label><input id="prodName" placeholder="Es. Nuovo singolo"></div><div class="field"><label>Categoria</label><select id="prodCategory"><option value="digital">Digitale — musica e video</option><option value="physical">Fisico — merchandising</option></select></div><div class="field"><label>Prezzo (€)</label><input id="prodPrice" type="number" min="0" step="0.01" placeholder="3.99"></div><div class="field"><label>Etichetta</label><input id="prodTag" placeholder="Pre-order, Album, T-shirt…"></div></div><div class="field"><label>Descrizione</label><textarea id="prodDesc" placeholder="Descrizione del prodotto"></textarea></div><div class="field"><label>Immagine copertina</label><input id="prodImage" type="file" accept="image/*"></div><div class="field"><label>File digitale da consegnare dopo il pagamento (demo)</label><input id="digitalFile" type="file" accept="audio/*,video/mp4,.zip,.pdf"></div><button class="lime" id="addProduct">Aggiungi prodotto</button><div class="notice">I pagamenti reali e il download protetto non sono attivi in questa demo: vanno collegati a un backend e a un provider di pagamento.</div><div id="adminProductList" class="items"></div></div>
-<div id="tab-settings" class="hidden"><h3>Personalizza il sito</h3><div class="formgrid"><div class="field"><label>Nome artista / titolo principale</label><input id="editArtist" placeholder="CHECCOSPIO"></div><div class="field"><label>Sottotitolo</label><input id="editTagline" placeholder="MUSICA. VISIONE. INDIPENDENZA."></div><div class="field"><label>Testo di benvenuto</label><input id="editEyebrow" placeholder="Benvenuto nel mondo di"></div><div class="field"><label>Foto/banner principale dell’artista</label><input id="heroImageFile" type="file" accept="image/*"></div></div><div class="field"><label>Stato musica in arrivo</label><select id="releaseStatus"><option value="none">Nessuna nuova uscita — nuvola, pioggia e lampi</option><option value="available">Nuove uscite disponibili — luna e fuochi d’artificio</option></select></div><div class="field"><label>Messaggio personalizzato per nuove uscite (opzionale)</label><input id="releaseCustom" placeholder="Lascia vuoto per il messaggio tradotto automaticamente"></div><button class="lime" id="saveSite">Salva personalizzazione sito</button><hr style="border-color:var(--line);margin:24px 0"><h3>Credenziali amministratore</h3><div class="notice">Demo locale: le credenziali vengono salvate solo in questo browser. Non usare password vere. Per il sito online serve autenticazione sicura lato server.</div><div class="formgrid"><div class="field"><label>Nuovo nome utente</label><input id="newUser" placeholder="admin"></div><div class="field"><label>Nuova password</label><input id="newPass" type="password" placeholder="Scegli una password demo"></div></div><button class="lime" id="saveCreds">Salva credenziali demo</button></div>
-</div></section>
-<footer class="footer"><div class="wrap footerin"><div><strong style="color:white;font-style:italic">CHECCOSPIO</strong><div>© 2026 CheccosPio. Tutti i diritti riservati.</div></div><div>MUSICA. VISIONE. INDIPENDENZA.</div><div><a href="#social">Contatti</a>　 Privacy　 Termini</div></div></footer>
-<button class="cartbar" id="cartButton">Carrello · <span id="cartCount">0</span></button>
-<div class="modal hidden" id="loginModal"><div class="modalbox"><button id="closeModal" style="float:right;background:none;border:0;color:white;font-size:22px">×</button><div class="eyebrow">Accesso protetto (demo)</div><h2>Area amministratore</h2><div class="field"><label>Nome utente</label><input id="loginUser" autocomplete="username" placeholder="admin"></div><div class="field"><label>Password</label><input id="loginPass" type="password" autocomplete="current-password" placeholder="admin123"></div><button class="lime wide" id="loginButton">Accedi</button><p class="muted">Credenziali iniziali demo: admin / admin123</p></div></div><div id="toast" class="toast hidden"></div>
-<script>
-const defaults=[];
-let products=JSON.parse(localStorage.getItem('cp_products')||'null')||defaults;let releases=JSON.parse(localStorage.getItem('cp_releases')||'[]');let posts=JSON.parse(localStorage.getItem('cp_posts')||'null')||[];
-// Remove old demonstration content from earlier prototype versions.
-if(products.some(p=>['PRE-ORDER NUOVO SINGOLO','ALBUM DIGITALE','FILM MUSICALE'].includes(p.name))) products=[];
-if(posts.some(p=>['Live vibes. Grazie a tutti. 🔥','In studio…','Ci vediamo presto. 🌙','Il viaggio continua.','Backstage.'].includes(p.caption))) posts=[];
-localStorage.setItem('cp_products',JSON.stringify(products));localStorage.setItem('cp_posts',JSON.stringify(posts));let cart=[];let logged=false;let chosenImage='';let chosenHeroImage='';let currentLang=localStorage.getItem('cp_lang')||'it';let siteSettings=JSON.parse(localStorage.getItem('cp_site')||'null')||{artist:'CHECCOSPIO',tagline:'MUSICA. VISIONE. INDIPENDENZA.',eyebrow:'Benvenuto nel mondo di',heroImage:'',releaseStatus:'none',releaseCustom:''};
-const $=id=>document.getElementById(id);function money(n){return new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR'}).format(n)}function toast(s){$('toast').textContent=s;$('toast').classList.remove('hidden');setTimeout(()=>$('toast').classList.add('hidden'),2500)}
-const translations={it:{music:'Musica',store:'Store',community:'Social',admin:'⚙ Admin',socialEyebrow:'— I miei canali',emptyProducts:'Nessun prodotto disponibile al momento.',emptyPosts:'Nessun contenuto pubblicato. I tuoi post appariranno qui quando li aggiungerai dal pannello.',welcome:'Benvenuto nel mondo di',tagline:'MUSICA. VISIONE. INDIPENDENZA.',spotify:'▶  ASCOLTA SU SPOTIFY',exploreStore:'♧  ESPLORA LA STORE',featured:'— In evidenza',products:'PRODOTTI',goStore:'Vai alla store →',updates:'— Aggiornamenti',upcoming:'MUSICA IN ARRIVO',noReleases:'Oh No! Al momento non sono previste nuove uscite!',yesReleases:'Sono Disponibili Nuove Uscite',social:'SOCIAL',follow:'Seguimi su tutte le piattaforme →',cart:'Carrello',add:'＋ AGGIUNGI AL CARRELLO'},en:{music:'Music',store:'Store',community:'Social',admin:'⚙ Admin',socialEyebrow:'— My channels',emptyProducts:'No products available yet.',emptyPosts:'No posts published. Your content will appear here when you add it in the admin panel.',welcome:'Welcome to the world of',tagline:'MUSIC. VISION. INDEPENDENCE.',spotify:'▶  LISTEN ON SPOTIFY',exploreStore:'♧  EXPLORE THE STORE',featured:'— Featured',products:'PRODUCTS',goStore:'Visit the store →',updates:'— Updates',upcoming:'UPCOMING MUSIC',noReleases:'Oh No! No new releases are planned at the moment!',yesReleases:'New Releases Are Available',social:'SOCIAL',follow:'Follow me on all platforms →',cart:'Cart',add:'＋ ADD TO CART'},es:{music:'Música',store:'Tienda',community:'Redes',admin:'⚙ Admin',socialEyebrow:'— Mis canales',emptyProducts:'No hay productos disponibles por ahora.',emptyPosts:'Todavía no hay publicaciones. Tu contenido aparecerá aquí cuando lo añadas desde el panel.',welcome:'Bienvenido al mundo de',tagline:'MÚSICA. VISIÓN. INDEPENDENCIA.',spotify:'▶  ESCUCHAR EN SPOTIFY',exploreStore:'♧  EXPLORAR LA TIENDA',featured:'— Destacados',products:'PRODUCTOS',goStore:'Ir a la tienda →',updates:'— Novedades',upcoming:'PRÓXIMOS LANZAMIENTOS',noReleases:'¡Oh, no! ¡Por el momento no hay nuevos lanzamientos previstos!',yesReleases:'Hay Nuevos Lanzamientos Disponibles',social:'SOCIAL',follow:'Sígueme en todas las plataformas →',cart:'Carrito',add:'＋ AÑADIR AL CARRITO'},fr:{music:'Musique',store:'Boutique',community:'Réseaux',admin:'⚙ Admin',socialEyebrow:'— Mes réseaux',emptyProducts:'Aucun produit disponible pour le moment.',emptyPosts:'Aucune publication. Ton contenu apparaîtra ici lorsque tu en ajouteras depuis le panneau.',welcome:'Bienvenue dans le monde de',tagline:'MUSIQUE. VISION. INDÉPENDANCE.',spotify:'▶  ÉCOUTER SUR SPOTIFY',exploreStore:'♧  EXPLORER LA BOUTIQUE',featured:'— À la une',products:'PRODUITS',goStore:'Voir la boutique →',updates:'— Actualités',upcoming:'SORTIES À VENIR',noReleases:'Oh non ! Aucune nouvelle sortie n’est prévue pour le moment !',yesReleases:'De Nouvelles Sorties Sont Disponibles',social:'SOCIAL',follow:'Suis-moi sur toutes les plateformes →',cart:'Panier',add:'＋ AJOUTER AU PANIER'}};
-function applyLanguage(lang){currentLang=lang;localStorage.setItem('cp_lang',lang);document.documentElement.lang=lang;const t=translations[lang]||translations.it;document.querySelectorAll('[data-i18n]').forEach(el=>{let k=el.dataset.i18n;if(t[k])el.textContent=t[k]});$('heroArtist').textContent=siteSettings.artist;$('heroTagline').textContent=siteSettings.tagline;$('heroEyebrow').textContent=siteSettings.eyebrow;const activeRelease=getUpcomingRelease();const isAvailable=!!activeRelease;$('releaseMessage').textContent=isAvailable?(siteSettings.releaseCustom||t.yesReleases):(t.noReleases);$('releaseDetails').textContent=activeRelease?`${activeRelease.name} · ${new Date(activeRelease.date).toLocaleString(lang,{dateStyle:'medium',timeStyle:'short'})}`:'';$('releaseBox').classList.toggle('available',isAvailable);if(isAvailable&&!$('releaseBox').querySelector('.moon')){let moon=document.createElement('div');moon.className='moon';moon.textContent='☾';let fw=document.createElement('div');fw.className='fireworks';$('releaseBox').prepend(fw,moon)}else if(!isAvailable){$('releaseBox').querySelector('.moon')?.remove();$('releaseBox').querySelector('.fireworks')?.remove()}$('cartButton').innerHTML=`${t.cart} · <span id="cartCount">${cart.length}</span>`;renderProducts()}
-function loadSiteSettings(){ $('editArtist').value=siteSettings.artist;$('editTagline').value=siteSettings.tagline;$('editEyebrow').value=siteSettings.eyebrow;$('releaseStatus').value=siteSettings.releaseStatus;$('releaseCustom').value=siteSettings.releaseCustom||'';if(siteSettings.heroImage){$('heroBanner').style.backgroundImage=`linear-gradient(90deg,#07111ff2,#07111f66),url("${siteSettings.heroImage}")`;$('heroBanner').classList.add('has-photo')}else{$('heroBanner').style.backgroundImage='';$('heroBanner').classList.remove('has-photo')}}
-function renderProducts(){ $('productsEmpty').classList.toggle('hidden',products.length>0); $('productGrid').innerHTML=products.map((p,i)=>`<article class="product"><div class="cover" style="${p.image?'background-image:linear-gradient(#07111f55,#07111f55),url('+p.image+');background-size:cover;background-position:center':''}"><span>${p.image?'':p.symbol||'✦'}</span></div><div class="prodinfo"><span class="tag">${esc(p.tag|| (p.category==='physical'?'FISICO':'DIGITALE'))}</span><h3>${esc(p.name)}</h3><p class="muted">${esc(p.desc||'Scopri il prodotto ufficiale CheccosPio.')}</p><div class="price">${money(Number(p.price)||0)}</div><button class="outline wide" onclick="addCart(${i})">${(translations[currentLang]||translations.it).add}</button></div></article>`).join('');$('adminProductList').innerHTML=products.map((p,i)=>`<div class="item"><b>${esc(p.name)}</b><br>${money(Number(p.price)||0)} · ${p.category==='physical'?'Fisico':'Digitale'}<br><button class="tab" onclick="removeProduct(${i})">Rimuovi</button></div>`).join('')||'<p class="muted">Nessun prodotto.</p>'}
-function getUpcomingRelease(){const now=Date.now();return releases.filter(r=>r.active&&r.date&&new Date(r.date).getTime()>now).sort((a,b)=>new Date(a.date)-new Date(b.date))[0]||null}
-function renderReleaseAdmin(){const el=$('releaseAdminList');if(el)el.innerHTML=releases.map((r,i)=>`<div class="item"><b>${esc(r.name)}</b><br>${esc(r.type)} · ${new Date(r.date).toLocaleString()}<br>Prodotto: ${r.active?'attivo':'bozza'}<br><button class="tab" onclick="toggleRelease(${i})">${r.active?'Disattiva prodotto':'Attiva prodotto'}</button> <button class="tab" onclick="deleteRelease(${i})">Elimina</button></div>`).join('')||'<p class="muted">Nessuna uscita creata.</p>'}
-window.toggleRelease=i=>{releases[i].active=!releases[i].active;localStorage.setItem('cp_releases',JSON.stringify(releases));if(releases[i].active&&!products.some(p=>p.releaseId===releases[i].id)){products.unshift({id:Date.now(),releaseId:releases[i].id,name:releases[i].name,category:'digital',tag:releases[i].type,price:releases[i].price,desc:releases[i].desc,image:releases[i].image,symbol:'♫'});localStorage.setItem('cp_products',JSON.stringify(products))}else if(!releases[i].active){products=products.filter(p=>p.releaseId!==releases[i].id);localStorage.setItem('cp_products',JSON.stringify(products))}renderProducts();renderReleaseAdmin();applyLanguage(currentLang)};window.deleteRelease=i=>{const id=releases[i].id;releases.splice(i,1);products=products.filter(p=>p.releaseId!==id);localStorage.setItem('cp_releases',JSON.stringify(releases));localStorage.setItem('cp_products',JSON.stringify(products));renderProducts();renderReleaseAdmin();applyLanguage(currentLang)};function renderPosts(){ $('social').classList.toggle('hidden',posts.length===0); $('postsEmpty').classList.toggle('hidden',posts.length>0); $('postGrid').innerHTML=posts.map(p=>`<article class="tile"><div class="tileart">${p.image?`<img src="${p.image}" style="width:100%;height:100%;object-fit:cover">`:p.symbol||'♫'}</div><p>${esc(p.caption)}</p><small>${esc(p.age||'Appena ora')} · ${esc(p.type||'Post')}</small></article>`).join('')}
-function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function persist(){localStorage.setItem('cp_products',JSON.stringify(products));localStorage.setItem('cp_posts',JSON.stringify(posts));renderProducts();renderPosts();renderReleaseAdmin()}
-window.addCart=i=>{cart.push(products[i]);$('cartCount').textContent=cart.length;toast('Aggiunto al carrello demo: '+products[i].name)};window.removeProduct=i=>{products.splice(i,1);persist();toast('Prodotto rimosso')};$('cartButton').onclick=()=>{if(!cart.length)return toast('Il carrello è vuoto');let total=cart.reduce((a,p)=>a+(Number(p.price)||0),0);toast('Totale demo: '+money(total)+' · Checkout non collegato')};
-$('adminOpen').onclick=()=>{$('loginModal').classList.remove('hidden')};$('closeModal').onclick=()=> $('loginModal').classList.add('hidden');$('loginButton').onclick=()=>{let u=localStorage.getItem('cp_user')||'admin',p=localStorage.getItem('cp_pass')||'admin123';if($('loginUser').value===u&&$('loginPass').value===p){logged=true;$('loginModal').classList.add('hidden');$('adminArea').classList.remove('hidden');$('adminArea').scrollIntoView({behavior:'smooth'});toast('Accesso demo effettuato')}else toast('Credenziali non corrette')};
-document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));['posts','products','release','settings'].forEach(t=>$('tab-'+t).classList.toggle('hidden',t!==b.dataset.tab))});
-$('heroImageFile').onchange=e=>{let f=e.target.files[0];if(f){let r=new FileReader();r.onload=()=>chosenHeroImage=r.result;r.readAsDataURL(f)}};
-$('saveSite').onclick=()=>{siteSettings={artist:$('editArtist').value.trim()||'CHECCOSPIO',tagline:$('editTagline').value.trim()||'MUSICA. VISIONE. INDIPENDENZA.',eyebrow:$('editEyebrow').value.trim()||'Benvenuto nel mondo di',heroImage:chosenHeroImage||siteSettings.heroImage,releaseStatus:$('releaseStatus').value,releaseCustom:$('releaseCustom').value.trim()};localStorage.setItem('cp_site',JSON.stringify(siteSettings));loadSiteSettings();applyLanguage(currentLang);toast('Personalizzazione salvata in questa demo')};
-$('saveCreds').onclick=()=>{if(!$('newUser').value.trim()||!$('newPass').value)return toast('Inserisci nome utente e password');localStorage.setItem('cp_user',$('newUser').value.trim());localStorage.setItem('cp_pass',$('newPass').value);toast('Credenziali demo salvate in questo browser')};
-$('addProduct').onclick=()=>{if(!$('prodName').value.trim()||$('prodPrice').value==='')return toast('Inserisci nome e prezzo');products.unshift({name:$('prodName').value,category:$('prodCategory').value,tag:$('prodTag').value||($('prodCategory').value==='physical'?'FISICO':'DIGITALE'),price:Number($('prodPrice').value),desc:$('prodDesc').value,symbol:$('prodCategory').value==='physical'?'✧':'♫',image:chosenImage});persist();['prodName','prodPrice','prodTag','prodDesc'].forEach(id=>$(id).value='');$('prodImage').value='';$('digitalFile').value='';chosenImage='';toast('Prodotto aggiunto alla vetrina demo')};
-$('prodImage').onchange=e=>{let f=e.target.files[0];if(f){let r=new FileReader();r.onload=()=>chosenImage=r.result;r.readAsDataURL(f)}};
-$('postFile').onchange=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{if(f.type.startsWith('video/')){$('videoPreview').src=r.result;$('videoPreview').classList.remove('hidden');$('postPreview').classList.add('hidden')}else{$('postPreview').src=r.result;$('postPreview').classList.remove('hidden');$('videoPreview').classList.add('hidden')}chosenPostMedia=r.result};r.readAsDataURL(f)};let chosenPostMedia='';
-$('addPost').onclick=()=>{let caption=$('postCaption').value.trim();let platforms=[...document.querySelectorAll('.platforms input:checked')].map(x=>x.value);if(!caption&&!chosenPostMedia)return toast('Aggiungi un testo o un file');posts.unshift({caption:caption||'Nuovo contenuto',type:$('postType').value,symbol:'♫',age:'Appena ora',image:chosenPostMedia,platforms});persist();$('postCaption').value='';$('postFile').value='';chosenPostMedia='';toast('Contenuto salvato nella demo · '+platforms.join(', '))};
-$('relImage').onchange=e=>{const f=e.target.files[0];if(f){const r=new FileReader();r.onload=()=>window.relCover=r.result;r.readAsDataURL(f)}};window.relCover='';$('saveRelease').onclick=()=>{const name=$('relName').value.trim(),date=$('relDate').value;if(!name||!date)return toast('Inserisci titolo e data di uscita');const release={id:Date.now(),name,type:$('relType').value,date:new Date(date).toISOString(),price:Number($('relPrice').value)||0,desc:$('relDesc').value.trim(),image:window.relCover||'',active:$('relActivate').checked,link:$('relLink').value.trim()};releases.unshift(release);localStorage.setItem('cp_releases',JSON.stringify(releases));if(release.active){products.unshift({id:Date.now()+1,releaseId:release.id,name:release.name,category:'digital',tag:release.type,price:release.price,desc:release.desc,image:release.image,symbol:'♫',link:release.link});localStorage.setItem('cp_products',JSON.stringify(products))}['relName','relDate','relPrice','relDesc','relLink'].forEach(id=>$(id).value='');$('relImage').value='';$('relActivate').checked=false;window.relCover='';renderProducts();renderReleaseAdmin();applyLanguage(currentLang);toast('Uscita creata')};
-$('languageSelect').value=currentLang;$('languageSelect').onchange=e=>applyLanguage(e.target.value);loadSiteSettings();applyLanguage(currentLang);renderProducts();renderPosts();renderReleaseAdmin();setInterval(()=>{applyLanguage(currentLang)},60000);
-</script></body></html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Sito ufficiale di CheccosPio: musica, nuove uscite e aggiornamenti.">
+  <meta property="og:title" content="CheccosPio — Musica, visione, indipendenza">
+  <meta property="og:description" content="Ascolta la musica e scopri le novità dal mondo di CheccosPio.">
+  <title>CheccosPio — Musica, visione, indipendenza</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07111f;
+      --panel: #0c1b2e;
+      --line: #203a59;
+      --text: #f4f5fb;
+      --muted: #a9aec2;
+      --accent: #4da3ff;
+      --accent-light: #77c8ff;
+      --purple: #a77bff;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.6 Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, select:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
+    .wrap { width: min(100% - 48px, var(--max)); margin-inline: auto; }
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-bottom: 1px solid var(--line);
+      background: #07111ff2;
+      backdrop-filter: blur(12px);
+    }
+    .navin {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .logo {
+      flex: 0 0 auto;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 950;
+      letter-spacing: -1.8px;
+    }
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2.5vw, 30px);
+      margin-left: auto;
+      color: #c9cce0;
+      font-size: 11px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+    .navlinks a:hover, .textlink:hover { color: var(--accent-light); }
+    .language {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 11px;
+      background: #0b1422;
+      color: var(--text);
+      font: inherit;
+      font-size: 12px;
+    }
+    .hero {
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(ellipse at 78% 38%, #57218c 0, transparent 33%),
+        radial-gradient(ellipse at 65% 95%, #20104d 0, transparent 46%),
+        linear-gradient(110deg, #07111f 10%, #11101c 66%, #100b1b);
+    }
+    .hero::after {
+      content: "CP";
+      position: absolute;
+      right: 8%;
+      bottom: -112px;
+      color: #fff;
+      font-size: clamp(220px, 31vw, 370px);
+      font-weight: 1000;
+      letter-spacing: -40px;
+      opacity: .035;
+      pointer-events: none;
+    }
+    .hero .wrap { position: relative; z-index: 1; }
+    .eyebrow {
+      color: var(--accent-light);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 900px;
+      margin: 16px 0 18px;
+      font-size: clamp(48px, 9vw, 100px);
+      font-style: italic;
+      font-weight: 950;
+      letter-spacing: -.055em;
+      line-height: .98;
+      overflow-wrap: anywhere;
+    }
+    .tagline {
+      color: #d1d3e0;
+      font-size: 12px;
+      letter-spacing: 4px;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: var(--text);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary {
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent-light), #398cff);
+      color: #06101d;
+      box-shadow: 0 8px 24px #398cff30;
+    }
+    .section { padding: clamp(48px, 7vw, 82px) 0; }
+    .sectionhead {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+    h2 {
+      margin: 5px 0 8px;
+      font-size: clamp(27px, 4vw, 36px);
+      letter-spacing: -1.3px;
+      line-height: 1.1;
+    }
+    .muted { color: var(--muted); font-size: 13px; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .textlink {
+      color: var(--accent-light);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .music-feature {
+      display: grid;
+      grid-template-columns: minmax(220px, .8fr) minmax(280px, 1.2fr);
+      gap: 26px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: clamp(18px, 4vw, 34px);
+      background: radial-gradient(ellipse at 0 0, #16365b, #0a1220 65%);
+    }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--purple);
+      border-radius: 999px;
+      padding: 4px 10px;
+      color: #d0b8ff;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .music-feature h3 { margin: 14px 0 7px; font-size: clamp(28px, 4vw, 44px); line-height: 1.1; }
+    .music-feature p { margin: 0 0 20px; }
+    .spotify-frame { min-width: 0; overflow: hidden; border-radius: 12px; }
+    .spotify-frame iframe { display: block; width: 100%; min-height: 352px; border: 0; }
+    .release-box {
+      min-height: 285px;
+      display: grid;
+      position: relative;
+      overflow: hidden;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 36px 22px;
+      background: radial-gradient(ellipse at 50% 100%, #21134a, #090a0f 66%);
+      text-align: center;
+    }
+    .release-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 20% 25%, #c5ff3d 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 20%, #b05cff 0 2px, transparent 3px),
+        radial-gradient(circle at 75% 65%, #fff 0 2px, transparent 3px),
+        radial-gradient(circle at 30% 70%, #b05cff 0 2px, transparent 3px);
+      animation: sparkle 1.5s ease-in-out infinite alternate;
+    }
+    .release-copy { position: relative; z-index: 1; max-width: 650px; }
+    .release-copy strong { display: block; margin-bottom: 8px; font-size: clamp(22px, 4vw, 32px); }
+    .release-copy p { margin: 0; color: #d5d8e7; }
+    .cloud {
+      position: absolute;
+      top: 45px;
+      left: calc(50% - 55px);
+      width: 110px;
+      height: 36px;
+      border-radius: 35px;
+      background: #c9d1e5;
+      filter: drop-shadow(0 0 18px #aab7ff88);
+      animation: drift 3s ease-in-out infinite alternate;
+    }
+    .cloud::before, .cloud::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: inherit;
+    }
+    .cloud::before { top: -19px; left: 17px; width: 46px; height: 46px; }
+    .cloud::after { top: -12px; right: 15px; width: 38px; height: 38px; }
+    .rain {
+      position: absolute;
+      top: 94px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .rain i {
+      width: 2px;
+      height: 20px;
+      background: #9fc8ff;
+      animation: rain .8s linear infinite;
+      opacity: .8;
+    }
+    .rain i:nth-child(2n) { animation-delay: .25s; }
+    .rain i:nth-child(3n) { animation-delay: .45s; }
+    .bolt {
+      position: absolute;
+      top: 104px;
+      left: calc(50% + 53px);
+      color: #e9eeff;
+      font-size: 42px;
+      filter: drop-shadow(0 0 10px #9e9dff);
+      animation: flash 2.2s infinite;
+    }
+    .store-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: clamp(24px, 5vw, 54px);
+      background:
+        radial-gradient(ellipse at 100% 0, #30205c, transparent 48%),
+        linear-gradient(145deg, #101d30, #080d17);
+      text-align: center;
+    }
+    .store-card h3 {
+      margin: 14px 0 10px;
+      color: var(--text);
+      font-size: clamp(34px, 7vw, 68px);
+      font-weight: 950;
+      letter-spacing: -.04em;
+      line-height: 1;
+    }
+    .store-card p { max-width: 520px; margin: 0 auto; color: var(--muted); }
+    .store-state {
+      display: inline-block;
+      border: 1px solid var(--accent-light);
+      border-radius: 999px;
+      padding: 6px 13px;
+      color: var(--accent-light);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+    .social-empty {
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      padding: 28px 18px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: 12px; }
+    .footerin { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    .footer strong { color: var(--text); font-style: italic; }
+    @keyframes drift { to { transform: translateX(24px); } }
+    @keyframes rain { 0% { transform: translateY(0); opacity: .1; } 40% { opacity: 1; } 100% { transform: translateY(34px); opacity: 0; } }
+    @keyframes flash { 0%, 90%, 100% { opacity: .15; } 92%, 96% { opacity: 1; } }
+    @keyframes sparkle { from { opacity: .25; } to { opacity: .8; } }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 32px, var(--max)); }
+      .navin { min-height: 66px; flex-wrap: wrap; gap: 10px 14px; padding-block: 10px; }
+      .logo { font-size: 21px; }
+      .navlinks { order: 3; width: 100%; justify-content: center; gap: 22px; margin: 0; padding-top: 5px; font-size: 10px; }
+      .language { margin-left: auto; }
+      .hero { min-height: 410px; }
+      .hero::after { right: 1%; bottom: -60px; font-size: 230px; }
+      .music-feature { grid-template-columns: 1fr; }
+      .spotify-frame iframe { min-height: 352px; }
+      .sectionhead { align-items: start; flex-direction: column; }
+      .release-box { min-height: 315px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap navin">
+      <a class="logo" href="#home" aria-label="CheccosPio — home">CHECCOSPIO</a>
+      <nav class="navlinks" aria-label="Navigazione principale">
+        <a href="#musica" data-copy="music">Musica</a>
+        <a href="#store" data-copy="store">Store</a>
+        <a href="#social" data-copy="community">Community</a>
+      </nav>
+      <label class="sr-only" for="languageSelect" data-copy="languageLabel">Lingua del sito</label>
+      <select class="language" id="languageSelect" aria-label="Lingua del sito">
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="es">🇪🇸 Español</option>
+        <option value="fr">🇫🇷 Français</option>
+      </select>
+    </div>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow" data-copy="welcome">Benvenuto nel mondo di</div>
+        <h1>CHECCOSPIO</h1>
+        <div class="tagline" data-copy="tagline">MUSICA. VISIONE. INDIPENDENZA.</div>
+        <div class="actions">
+          <a class="button primary" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/artist/4MeVJ2uTbH7aM9SRHUhIzl" data-copy="listen">▶ &nbsp; ASCOLTA SU SPOTIFY</a>
+          <a class="button" href="#store" data-copy="explore">♧ &nbsp; ESPLORA LO STORE</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="musica">
+      <div class="sectionhead">
+        <div>
+          <div class="eyebrow" data-copy="catalog">— Catalogo ufficiale</div>
+          <h2 data-copy="musicTitle">MUSICA</h2>
+          <p class="muted" data-copy="musicIntro">Album, singoli e nuove uscite dal profilo Spotify ufficiale.</p>
+        </div>
+        <a class="textlink" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/artist/4MeVJ2uTbH7aM9SRHUhIzl" data-copy="openSpotify">Apri Spotify ↗</a>
+      </div>
+      <article class="music-feature">
+        <div>
+          <span class="tag" data-copy="featured">IN EVIDENZA</span>
+          <h3>Acid Bugs</h3>
+          <p class="muted" data-copy="featuredIntro">Ascolta la musica sul profilo ufficiale CheccosPio.</p>
+          <a class="button primary" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/artist/4MeVJ2uTbH7aM9SRHUhIzl" data-copy="listenSpotify">Ascolta su Spotify</a>
+        </div>
+        <div class="spotify-frame">
+          <iframe
+            title="Profilo Spotify ufficiale di CheccosPio"
+            src="https://open.spotify.com/embed/artist/4MeVJ2uTbH7aM9SRHUhIzl?utm_source=generator&amp;theme=0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </article>
+
+      <div class="sectionhead" style="margin-top:38px">
+        <div>
+          <div class="eyebrow" data-copy="nextRelease">— Prossima release</div>
+          <h2 data-copy="upcoming">MUSICA IN ARRIVO</h2>
+        </div>
+      </div>
+      <div class="release-box" aria-label="Aggiornamenti sulle prossime uscite">
+        <div class="cloud" aria-hidden="true"></div>
+        <div class="rain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="bolt" aria-hidden="true">ϟ</div>
+        <div class="release-copy">
+          <strong data-copy="noReleases">Oh no! Al momento non sono previste nuove uscite.</strong>
+          <p data-copy="releaseCheck">Torna a trovarmi per scoprire i prossimi aggiornamenti.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="store">
+      <div class="sectionhead">
+        <div>
+          <div class="eyebrow" data-copy="officialShop">— Shop ufficiale</div>
+          <h2 data-copy="storeTitle">STORE</h2>
+          <p class="muted" data-copy="storeIntro">Merchandising e prodotti ufficiali CheccosPio.</p>
+        </div>
+      </div>
+      <div class="store-card" aria-labelledby="storeStatus">
+        <span class="store-state" data-copy="storeLabel">SHOP NON ANCORA DISPONIBILE</span>
+        <h3 id="storeStatus">IN ARRIVO!</h3>
+        <p data-copy="storeDisabled">Lo store è in preparazione. Acquisti, carrello e pagamenti sono disattivati.</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="social">
+      <div class="sectionhead">
+        <div>
+          <div class="eyebrow" data-copy="channels">— Canali ufficiali</div>
+          <h2 data-copy="communityTitle">COMMUNITY</h2>
+        </div>
+        <a class="textlink" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/artist/4MeVJ2uTbH7aM9SRHUhIzl" data-copy="follow">Seguimi su Spotify ↗</a>
+      </div>
+      <div class="social-empty" data-copy="socialEmpty">Altri canali e aggiornamenti saranno aggiunti qui.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footerin">
+      <div><strong>CHECCOSPIO</strong><div>© 2026 CheccosPio. <span data-copy="rights">Tutti i diritti riservati.</span></div></div>
+      <div data-copy="tagline">MUSICA. VISIONE. INDIPENDENZA.</div>
+      <a href="https://open.spotify.com/artist/4MeVJ2uTbH7aM9SRHUhIzl" target="_blank" rel="noopener noreferrer" class="textlink" data-copy="contact">Contatti ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      it: {
+        music: 'Musica', store: 'Store', community: 'Community', languageLabel: 'Lingua del sito',
+        welcome: 'Benvenuto nel mondo di', tagline: 'MUSICA. VISIONE. INDIPENDENZA.',
+        listen: '▶  ASCOLTA SU SPOTIFY', explore: '♧  ESPLORA LO STORE',
+        catalog: '— Catalogo ufficiale', musicTitle: 'MUSICA',
+        musicIntro: 'Album, singoli e nuove uscite dal profilo Spotify ufficiale.',
+        openSpotify: 'Apri Spotify ↗', featured: 'IN EVIDENZA',
+        featuredIntro: 'Ascolta la musica sul profilo ufficiale CheccosPio.',
+        listenSpotify: 'Ascolta su Spotify', nextRelease: '— Prossima release',
+        upcoming: 'MUSICA IN ARRIVO', noReleases: 'Oh no! Al momento non sono previste nuove uscite.',
+        releaseCheck: 'Torna a trovarmi per scoprire i prossimi aggiornamenti.',
+        officialShop: '— Shop ufficiale', storeTitle: 'STORE',
+        storeIntro: 'Merchandising e prodotti ufficiali CheccosPio.',
+        storeLabel: 'SHOP NON ANCORA DISPONIBILE',
+        storeDisabled: 'Lo store è in preparazione. Acquisti, carrello e pagamenti sono disattivati.',
+        channels: '— Canali ufficiali', communityTitle: 'COMMUNITY',
+        follow: 'Seguimi su Spotify ↗', socialEmpty: 'Altri canali e aggiornamenti saranno aggiunti qui.',
+        rights: 'Tutti i diritti riservati.', contact: 'Contatti ↗'
+      },
+      en: {
+        music: 'Music', store: 'Store', community: 'Community', languageLabel: 'Site language',
+        welcome: 'Welcome to the world of', tagline: 'MUSIC. VISION. INDEPENDENCE.',
+        listen: '▶  LISTEN ON SPOTIFY', explore: '♧  EXPLORE THE STORE',
+        catalog: '— Official catalog', musicTitle: 'MUSIC',
+        musicIntro: 'Albums, singles and new releases from the official Spotify profile.',
+        openSpotify: 'Open Spotify ↗', featured: 'FEATURED',
+        featuredIntro: 'Listen on the official CheccosPio profile.',
+        listenSpotify: 'Listen on Spotify', nextRelease: '— Next release',
+        upcoming: 'UPCOMING MUSIC', noReleases: 'No new releases are scheduled right now.',
+        releaseCheck: 'Come back for the latest updates.',
+        officialShop: '— Official shop', storeTitle: 'STORE',
+        storeIntro: 'Official CheccosPio merchandise and products.',
+        storeLabel: 'SHOP NOT YET AVAILABLE',
+        storeDisabled: 'The store is being prepared. Shopping, cart and payments are disabled.',
+        channels: '— Official channels', communityTitle: 'COMMUNITY',
+        follow: 'Follow on Spotify ↗', socialEmpty: 'More channels and updates will appear here.',
+        rights: 'All rights reserved.', contact: 'Contact ↗'
+      },
+      es: {
+        music: 'Música', store: 'Tienda', community: 'Comunidad', languageLabel: 'Idioma del sitio',
+        welcome: 'Bienvenido al mundo de', tagline: 'MÚSICA. VISIÓN. INDEPENDENCIA.',
+        listen: '▶  ESCUCHAR EN SPOTIFY', explore: '♧  EXPLORAR LA TIENDA',
+        catalog: '— Catálogo oficial', musicTitle: 'MÚSICA',
+        musicIntro: 'Álbumes, sencillos y novedades del perfil oficial de Spotify.',
+        openSpotify: 'Abrir Spotify ↗', featured: 'DESTACADO',
+        featuredIntro: 'Escucha música en el perfil oficial de CheccosPio.',
+        listenSpotify: 'Escuchar en Spotify', nextRelease: '— Próximo lanzamiento',
+        upcoming: 'PRÓXIMA MÚSICA', noReleases: 'Ahora mismo no hay nuevos lanzamientos previstos.',
+        releaseCheck: 'Vuelve pronto para ver las novedades.',
+        officialShop: '— Tienda oficial', storeTitle: 'TIENDA',
+        storeIntro: 'Productos y merchandising oficial de CheccosPio.',
+        storeLabel: 'TIENDA AÚN NO DISPONIBLE',
+        storeDisabled: 'La tienda está en preparación. Las compras, el carrito y los pagos están desactivados.',
+        channels: '— Canales oficiales', communityTitle: 'COMUNIDAD',
+        follow: 'Sígueme en Spotify ↗', socialEmpty: 'Aquí añadiremos más canales y novedades.',
+        rights: 'Todos los derechos reservados.', contact: 'Contacto ↗'
+      },
+      fr: {
+        music: 'Musique', store: 'Boutique', community: 'Communauté', languageLabel: 'Langue du site',
+        welcome: 'Bienvenue dans le monde de', tagline: 'MUSIQUE. VISION. INDÉPENDANCE.',
+        listen: '▶  ÉCOUTER SUR SPOTIFY', explore: '♧  DÉCOUVRIR LA BOUTIQUE',
+        catalog: '— Catalogue officiel', musicTitle: 'MUSIQUE',
+        musicIntro: 'Albums, singles et nouveautés du profil Spotify officiel.',
+        openSpotify: 'Ouvrir Spotify ↗', featured: 'À LA UNE',
+        featuredIntro: 'Écoute la musique sur le profil officiel de CheccosPio.',
+        listenSpotify: 'Écouter sur Spotify', nextRelease: '— Prochaine sortie',
+        upcoming: 'MUSIQUE À VENIR', noReleases: 'Aucune nouvelle sortie n’est prévue pour le moment.',
+        releaseCheck: 'Reviens bientôt pour découvrir les nouveautés.',
+        officialShop: '— Boutique officielle', storeTitle: 'BOUTIQUE',
+        storeIntro: 'Produits et merchandising officiels de CheccosPio.',
+        storeLabel: 'BOUTIQUE PAS ENCORE DISPONIBLE',
+        storeDisabled: 'La boutique est en préparation. Les achats, le panier et les paiements sont désactivés.',
+        channels: '— Réseaux officiels', communityTitle: 'COMMUNAUTÉ',
+        follow: 'Suis-moi sur Spotify ↗', socialEmpty: 'D’autres réseaux et actualités seront ajoutés ici.',
+        rights: 'Tous droits réservés.', contact: 'Contact ↗'
+      }
+    };
+
+    const languageSelect = document.getElementById('languageSelect');
+    function applyLanguage(language) {
+      const selected = translations[language] ? language : 'it';
+      document.documentElement.lang = selected;
+      document.querySelectorAll('[data-copy]').forEach((element) => {
+        const translated = translations[selected][element.dataset.copy];
+        if (translated) element.textContent = translated;
+      });
+      try { localStorage.setItem('cp_lang', selected); } catch {}
+    }
+    let savedLanguage = 'it';
+    try { savedLanguage = localStorage.getItem('cp_lang') || 'it'; } catch {}
+    languageSelect.value = translations[savedLanguage] ? savedLanguage : 'it';
+    languageSelect.addEventListener('change', (event) => applyLanguage(event.target.value));
+    applyLanguage(languageSelect.value);
+  </script>
+</body>
+</html>
